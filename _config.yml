@@ -1,2 +1,3 @@
 theme: jekyll-theme-cayman
-title: Bract - Multi-purpose, modular application initialization framework for Clojure
+title: Bract
+description: Multi-purpose, modular application initialization framework for Clojure
