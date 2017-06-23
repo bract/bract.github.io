@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Bract#58; Multi-purpose, modular application initialization framework for Clojure
+title: Bract - Multi-purpose, modular application initialization framework for Clojure
 ---
 
 ## Rationale
