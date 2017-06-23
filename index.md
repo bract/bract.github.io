@@ -1,34 +1,26 @@
 ---
 layout: default
-title: Bract - Multi-purpose, modular application initialization framework for Clojure
+title: Home:Bract - Multi-purpose, modular application initialization framework for Clojure
 ---
 
-## Rationale
-
-Application configuration and initialization are tangential to delivering business value, yet we frequently get bogged
-down by their incidental complexity. Application development could be a wonderful experience if we only have to focus
-on the application logic without worrying about configuration, initialization and the sundry development/maintenance
-tasks that applications frequently need. This should be a solved problem in a repeatable, predictable manner.
+# [About](/about.html)    |    Documentation    |    Discuss
 
 
-### What is Bract?
+**Early days for Bract. This website is work-in-progress, not complete yet.**
 
-Bract is a Clojure framework to bring power and flexibility to application configuration and initialization workflow.
+Github: https://github.com/bract
 
-Bract aims to bind the following pieces together:
 
-- Application entry-point
-- Application configuration
-- Steps to initialize and launch application
-- Extensions to _bract.core_ via Bract modules
-- Integration with libraries/frameworks via Bract modules
+## Latest release
 
-Bract does not aim to:
 
-- Prescribe what environments (Dev/QA/Prod etc.) you may have
-- Decide which libraries you should use (except Keypin for configuration)
-- Make you use dependency injection, let alone any particular DI library
-- Discourage you from using dependency injection
+|------------|----------------------|---------------------------------------------------------------|----------|
+| Module     | Description          | 3rd party dependencies                                        | Version  |
+|------------|----------------------|---------------------------------------------------------------|----------|
+| bract.core | Core functionality   | [Keypin](https://github.com/kumarshantanu/keypin)             | 0.3.0    |
+| bract.cli  | Command-line support | [tools.cli](https://github.com/clojure/tools.cli)             | 0.3.0    |
+| bract.dev  | REPL reload support  | [tools.namespace](https://github.com/clojure/tools.namespace) | 0.3.0    |
+| bract.ring | Ring support         |                                                               | 0.3.0    |
 
 
 ## License
