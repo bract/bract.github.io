@@ -8,7 +8,7 @@ title: Bract Home - Multi-purpose, modular application initialization framework 
 
 **Early days for Bract. This website is work-in-progress, not complete yet.**
 
-Github: https://github.com/bract
+Github: [https://github.com/bract](https://github.com/bract)
 
 
 ## Latest release
@@ -17,7 +17,7 @@ Github: https://github.com/bract
 |------------|----------------------|----------|---------------------------------------------------------------|
 | Module     | Description          | Version  | 3rd party dependencies                                        |
 |------------|----------------------|----------|---------------------------------------------------------------|
-| bract.core | Core functionality   | 0.3.0    | [Keypin](https://github.com/kumarshantanu/keypin)             |
+| bract.core | Core functionality   | 0.3.0    | [Keypin](https://github.com/kumarshantanu/keypin) for config  |
 | bract.cli  | Command-line support | 0.3.0    | [tools.cli](https://github.com/clojure/tools.cli)             |
 | bract.dev  | REPL reload support  | 0.3.0    | [tools.namespace](https://github.com/clojure/tools.namespace) |
 | bract.ring | Ring support         | 0.3.0    |                                                               |
