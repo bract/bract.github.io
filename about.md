@@ -3,6 +3,8 @@ layout: default
 title: About Bract - Multi-purpose, modular application initialization framework for Clojure
 ---
 
+# About
+
 ## Rationale
 
 Application configuration and initialization are tangential to delivering business value, yet we frequently get bogged

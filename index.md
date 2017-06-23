@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Home:Bract - Multi-purpose, modular application initialization framework for Clojure
+title: Bract Home - Multi-purpose, modular application initialization framework for Clojure
 ---
 
-# [About](/about.html)    |    Documentation    |    Discuss
+# [About](/about.html)    |    Documentation    |    [Discuss](/discuss.html)
 
 
 **Early days for Bract. This website is work-in-progress, not complete yet.**
@@ -14,13 +14,13 @@ Github: https://github.com/bract
 ## Latest release
 
 
-|------------|----------------------|---------------------------------------------------------------|----------|
-| Module     | Description          | 3rd party dependencies                                        | Version  |
-|------------|----------------------|---------------------------------------------------------------|----------|
-| bract.core | Core functionality   | [Keypin](https://github.com/kumarshantanu/keypin)             | 0.3.0    |
-| bract.cli  | Command-line support | [tools.cli](https://github.com/clojure/tools.cli)             | 0.3.0    |
-| bract.dev  | REPL reload support  | [tools.namespace](https://github.com/clojure/tools.namespace) | 0.3.0    |
-| bract.ring | Ring support         |                                                               | 0.3.0    |
+|------------|----------------------|----------|---------------------------------------------------------------|
+| Module     | Description          | Version  | 3rd party dependencies                                        |
+|------------|----------------------|----------|---------------------------------------------------------------|
+| bract.core | Core functionality   | 0.3.0    | [Keypin](https://github.com/kumarshantanu/keypin)             |
+| bract.cli  | Command-line support | 0.3.0    | [tools.cli](https://github.com/clojure/tools.cli)             |
+| bract.dev  | REPL reload support  | 0.3.0    | [tools.namespace](https://github.com/clojure/tools.namespace) |
+| bract.ring | Ring support         | 0.3.0    |                                                               |
 
 
 ## License
