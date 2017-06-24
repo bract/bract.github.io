@@ -27,8 +27,8 @@ Bract aims to bind the following pieces together:
 
 Bract does not aim to:
 
-- Prescribe what environments (Dev/QA/Prod etc.) you may have
-- Decide which libraries you should use (except Keypin for configuration)
+- Prescribe which environments (Dev/QA/Prod etc.) you may have
+- Decide which libraries you should use (except [Keypin](https://github.com/kumarshantanu/keypin) for configuration)
 - Make you use dependency injection, let alone any particular DI library
 - Discourage you from using dependency injection
 
@@ -55,8 +55,8 @@ The information an inducer finds in the context is usually put in by other induc
 inducers only have hard dependency on well-known context (or config) keys. This helps to keep inducers decoupled from
 each other while encouraging flexible workflows.
 
-#### Entrypoint
+#### Entry point
 
 The top level inducer workflow is usually executed from either a `-main` or an implicitly called function. An
 application may very well choose to do its own processing before invoking Bract initialization, but generally Bract
-modules make the job easier by providing such entrypoint functions.
+modules make the job easier by providing such entry-point functions.
