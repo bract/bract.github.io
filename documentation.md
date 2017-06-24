@@ -5,13 +5,54 @@ title: Bract Documentation - Multi-purpose, modular application initialization f
 
 # [Home](/)    |    [About](/about.html)    |    Documentation    |    [Discuss](/discuss.html)
 
-Bract [revolves around](/about.html#how-it-works) the idea of _inducers_. Here we will talk about working with inducers and other related aspects.
+## Keypin
 
-## Quickstart
+The [Keypin](https://github.com/kumarshantanu/keypin) library is included with the _bract.core_ module. Bract uses
+Keypin to read/write config and to define keys that can be looked up in the config. Keypin documentation is out of
+scope here, but let us quickly see how to define keys using Keypin that we can use to look up their values.
 
-Bract covers disparate aspects of application initialization, so let us take a contrived example.
+Require namespaces:
+
+```clojure
+(ns demo.app
+  (:require
+    [keypin.core :as keypin]
+	[keypin.util :as kputil]))
+```
+
+Key definition:
+
+```clojure
+(keypin/defkey port [:port integer? "port number" {:parser kputil/any->int}])
+```
+
+Look up value:
+
+```clojure
+(port {:port 1234})  ; returns 1234
+(port {:foo "bar"})  ; throws exception because port is missing
+```
+
+
+## Inducer
+
+Bract [revolves around](/about.html#how-it-works) the idea of _inducers_. Let us write a hello-world inducer first:
+
+```clojure
+(defn hello-world
+  [context]
+  (println "Hello World!")
+  context)
+```
+
+Now let us write an inducer that uses the context:
 
 TODO
+
+Once you have several inducers and want to execute them in order, below is how you can do so:
+
+TODO
+
 
 ## Concepts
 
