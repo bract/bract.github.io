@@ -77,13 +77,9 @@ Once you have several inducers and want to execute them in order, below is how y
 ```
 
 
-## Concepts
-
-TODO
-
 ## Demo applications
 
-There are few demo applications that may be useful to understand how Bract may be used.
+There are few simple demo applications that may be useful to understand how Bract can be used.
 
 * **[Wordcount](https://github.com/bract/bract.demo.wordcount)** is a simple CLI application that reads STDIN and prints the word count
   * Configuration: Stop words (stop words are excluded from the word count)
@@ -104,6 +100,11 @@ There are few demo applications that may be useful to understand how Bract may b
   * Unit tests entry point
   * REPL-based development entry point
   * ClojureScript
+
+
+## Concepts
+
+TODO
 
 
 ## Howto
