@@ -17,13 +17,15 @@ Require namespaces:
 (ns demo.app
   (:require
     [keypin.core :as keypin]
-	[keypin.util :as kputil]))
+    [keypin.util :as kputil]))
 ```
 
 Key definition:
 
 ```clojure
-(keypin/defkey port [:port integer? "port number" {:parser kputil/any->int}])
+(keypin/defkey
+  addr [:addr string?           "IP address"]
+  port [:port #(< 1023 % 65535) "port number" {:parser kputil/any->int}])
 ```
 
 Look up value:
@@ -47,11 +49,32 @@ Bract [revolves around](/about.html#how-it-works) the idea of _inducers_. Let us
 
 Now let us write an inducer that uses the context:
 
-TODO
+```clojure
+(keypin/defkey
+  email-tpl-file [:email-tpl-file string? "Email template filename"]
+  email-template [:email-template string? "Email template"])
+
+(defn cache-email-template
+  [context]
+  (require '[clojure.java.io :as io])
+  (let [tpl-file (email-tpl-file context)
+        tcontent (slurp)]
+    (if-let [tpl-resource (io/resource tpl-file)]
+      (assoc context (key email-template) (slurp tpl-resource))
+      (throw (ex-info "Missing template file in classpath" {:email-template-file tpl-file})))))
+```
 
 Once you have several inducers and want to execute them in order, below is how you can do so:
 
-TODO
+```clojure
+(require '[bract.core.inducer :as bc-inducer])
+
+(bc-inducer/induce {}  ; <- initial context
+  [app/foo  ; <- this is an inducer
+   app/bar  ; <- this is also an inducer
+   app/baz  ; <- and this one too
+   ])
+```
 
 
 ## Concepts
