@@ -3,7 +3,7 @@ layout: default
 title: Bract Home - Multi-purpose, modular application initialization framework for Clojure
 ---
 
-# [About](/about.html)    |    [Documentation](/documentation.html)    |    [Discuss](/discuss.html)
+# Home        [About](/about.html)        [Documentation](/documentation.html)        [Discuss](/discuss.html)
 
 
 **Early days for Bract. This website is work-in-progress, not complete yet.**

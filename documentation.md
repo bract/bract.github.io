@@ -3,7 +3,7 @@ layout: default
 title: Bract Documentation - Multi-purpose, modular application initialization framework for Clojure
 ---
 
-# Documentation
+# [Home](/index.html)        [About](/about.html)        Documentation        [Discuss](/discuss.html)
 
 Bract [revolves around](/about.html#how-it-works) the idea of _inducers_. Here we will talk about working with inducers and other related aspects.
 
