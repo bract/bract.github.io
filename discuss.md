@@ -7,11 +7,11 @@ title: Discuss Bract - Multi-purpose, modular application initialization framewo
 
 ## Community
 
-* Discussion group: [https://groups.google.com/forum/#!forum/bract](https://groups.google.com/forum/#!forum/bract)
+* **Discussion group:** [https://groups.google.com/forum/#!forum/bract](https://groups.google.com/forum/#!forum/bract)
 
-* Clojurian Slack channel: [#bract](https://clojurians.slack.com/messages/C5YACPD9P) (you need an invitation from [http://clojurians.net/](http://clojurians.net/) to join the Clojurian slack team)
+* **Slack channel:** [#bract](https://clojurians.slack.com/messages/C5YACPD9P) (you need an invitation from [http://clojurians.net/](http://clojurians.net/) to join the Clojurian slack team)
 
 
-## Issues/Feature requests
+## Issue tracking
 
 Please use Github issues for respective repos.
