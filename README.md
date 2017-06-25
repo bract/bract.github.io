@@ -1,6 +1,6 @@
-# Bract
+# bract.github.io
 
-Multi-purpose, modular application initialization framework for Clojure
+Website content for Bract.
 
 
 ## License
