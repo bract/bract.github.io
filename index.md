@@ -11,7 +11,7 @@ title: Bract Home - Multi-purpose, modular application initialization framework 
 ## Latest release
 
 |---------------------------------------------------|----------------------|------------------------------|---------------------------------------------------------------|
-| Module                                            | Description          | Artifact                     | 3rd party dependencies                                        |
+| Module                                            | Description          | Artifact                     | Dependencies                                                  |
 |---------------------------------------------------|----------------------|------------------------------|---------------------------------------------------------------|
 | [bract.core](https://github.com/bract/bract.core) | Core functionality   | `[bract/bract.core "0.3.0"]` | [Keypin](https://github.com/kumarshantanu/keypin) for config  |
 | [bract.cli](https://github.com/bract/bract.cli)   | Command-line support | `[bract/bract.cli  "0.3.0"]` | [tools.cli](https://github.com/clojure/tools.cli)             |
