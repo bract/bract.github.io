@@ -80,19 +80,19 @@ Once you have several inducers and want to execute them in order, below is how y
 
 There are few simple demo applications that may be useful to understand how Bract can be used.
 
-* **[Wordcount](https://github.com/bract/bract.demo.wordcount)** is a simple CLI application that reads STDIN and prints the word count
+* **[Wordcount](https://github.com/bract/demo.wordcount)** is a simple CLI application that reads STDIN and prints the word count
   * Configuration: Stop words (stop words are excluded from the word count)
   * CLI entry point for running application as uberjar
   * Unit tests entry point
   * REPL-based development entry point
-* **[Diceroll](https://github.com/bract/bract.demo.diceroll)** is a simple Ring based web application that responds with a roll of dice
+* **[Diceroll](https://github.com/bract/demo.diceroll)** is a simple Ring based web application that responds with a roll of dice
   * Dice configuration
   * CLI entry point for running application as uberjar
   * Web development entry point usig [lein-ring](https://github.com/weavejester/lein-ring)
   * Unit tests entry point
   * REPL-based development entry point
   * Configurable Ring middleware using wrapper inducers
-* **[TodoMVC](https://github.com/bract/demo.todomvc)** is an interactive TodoMVC web application developed using Ring and ClojureScript
+* **[TodoMVC](https://github.com/bract/demo.todomvc)** is an interactive TodoMVC webapp developed using Ring and ClojureScript
   * Database configuration
   * Database migration entry point
   * CLI entry point for running application as uberjar
