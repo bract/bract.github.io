@@ -5,7 +5,9 @@ title: Bract Home - Multi-purpose, modular application initialization framework 
 # Home    |    [About](/about.html)    |    [Documentation](/documentation.html)    |    [Discuss](/discuss.html)
 
 
-**Early days for Bract. This website is work-in-progress, not complete yet.**
+**Early days for Bract - expect breaking changes. This website is work-in-progress, not complete yet.**
+
+_**Bract requires Clojure 1.7 or higher, Java 7 or higher.**_
 
 
 ## Latest release
