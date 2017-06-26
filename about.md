@@ -32,8 +32,8 @@ Bract does not aim to:
 - Discourage you from using dependency injection
 
 
-Bract has _bract.core_ and a bunch of modules for various purposes. [Keypin](https://github.com/kumarshantanu/keypin)
-is the only _bract.core_ dependency for config support. While _bract.core_ is low level and prescribes no style, it is
+Bract is made of _bract.core_ (with [Keypin](https://github.com/kumarshantanu/keypin) as the only dependency for config
+support) and a bunch of modules for various purposes. While _bract.core_ is low level and prescribes no style, it is
 possible to author opinionated Bract modules on top of it. One may even extend Bract to build a custom application
 framework. Bract is suited for various types of applications, e.g. command-line tools, web services, batch jobs, web
 applications etc. and integrates well with tangential, yet relevant aspects such as configurable JVM logging.
