@@ -9,6 +9,27 @@ title: Module bract.dev - Multi-purpose, modular application initialization fram
 Leiningen coordinates: `[bract/bract.dev "0.3.1"]`
 
 
+### Usage
+
+Include it as a dev dependency in your `project.clj`:
+
+```clojure
+:profiles {:dev {:dependencies [bract/bract.dev "0.3.1"]
+                 :source-paths ["dev"]}}
+```
+
+Also create a file `dev/user.clj` as follows:
+
+```clojure
+(ns user
+  (:require
+    [bract.core.dev   :refer [start stop verbose config]]
+    [bract.dev.reload :refer [go reinit reset restart]]))
+```
+
+Now when you run `lein repl` you have access to the `user` namespace vars.
+
+
 ### Keys
 
 This module does not expose any context/config keys.
