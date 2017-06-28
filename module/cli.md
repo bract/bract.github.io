@@ -9,7 +9,7 @@ title: Module bract.cli - Multi-purpose, modular application initialization fram
 Leiningen coordinates: `[bract/bract.cli "0.3.1"]`
 
 
-## Context keys
+### Context keys
 
 | Context key                   | Value         | Description |
 |-------------------------------|---------------|-------------|
@@ -19,7 +19,7 @@ Leiningen coordinates: `[bract/bract.cli "0.3.1"]`
 | `:bract.cli/app-commands`     | Command map   | Commands, e.g. `{"run" {:doc "Run app" :handler myapp.core/run}}` |
 
 
-## Inducers
+### Inducers
 
 All inducers exposed by _bract.cli_ are in the namespace `bract.cli.inducer`. A summary is below:
 
@@ -34,12 +34,12 @@ All inducers exposed by _bract.cli_ are in the namespace `bract.cli.inducer`. A 
 |                   | `:bract.cli/app-commands` |                            |                 |
 
 
-## Entry points
+### Entry points
 
 This module provides the following entry points for CLI integration.
 
 
-### Provided Java `main()` method
+#### Provided Java `main()` method
 
 The namespace `bract.cli.main` is generated as a Java class, hence the function `bract.cli.main/-main` can serve as a
 Java `main()` method.
@@ -55,7 +55,7 @@ After updating `project.clj` as mentioned above , the `lein uberjar` command wou
 you may execute using the command `java -jar <appname>-<version>-standalone.jar` - it invokes the main method.
 
 
-### Application's own `main()` method
+#### Application's own `main()` method
 
 When you want to customize the initial context or you want to extend the CLI commands supported by the application,
 you would want to call the `bract.cli.main/trigger` function with context as the argument. For example, if you want to

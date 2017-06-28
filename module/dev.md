@@ -9,17 +9,17 @@ title: Module bract.dev - Multi-purpose, modular application initialization fram
 Leiningen coordinates: `[bract/bract.dev "0.3.1"]`
 
 
-## Keys
+### Keys
 
 This module does not expose any context/config keys.
 
 
-## Inducers
+### Inducers
 
 This module does not expose any inducers.
 
 
-## Entry points
+### Entry points
 
 This module exposes several functions as entry point for REPL based interactive development. These functions are
 available in the `bract.dev.reload` namespace:
