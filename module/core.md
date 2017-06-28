@@ -45,19 +45,19 @@ The application config is placed under the context key `:bract.core/config` (see
 All inducers exposed by _bract.core_ are in the namespace `bract.core.inducer`. A summary is below. Input context key
 `:bract.core/config` has been omitted where input config key is specified.
 
-| Inducer function       | Input context keys         | Input config keys       | Output context keys  | Description |
-|------------------------|----------------------------|-------------------------|----------------------|-------------|
-| `set-verbosity`        | `:bract.core/verbose?`     |                         |                      | Set verbosity as per flag  |
-| `read-config`          | `:bract.core/config-files` |                         | `:bract.core/config` | Read config from filenames |
-| `run-context-inducers` | `:bract.core/inducers`     |                         |                      | Execute specified inducers |
-| `run-config-inducers`  | `:bract.core/config`       | `"bract.core.inducers"` |                      | Execute specified inducers |
-| `context-hook`         |                            |                         |                      | Do something with context  |
-| `config-hook`          | `:bract.core/config`       |                         |                      | Do something with config   |
-| `export-as-sysprops`   |                            | `"bract.core.exports"`  |                      | Export system properties   |
-| `unexport-sysprops`    |                            | `"bract.core.exports"`  |                      | Remove system properties   |
-| `invoke-launcher`      | `:bract.core/launch?`      | `"bract.core.launcher"` |                      | Launch application         |
-| `deinit`               | `:bract.core/deinit`       |                         |                      | De-initialize application  |
-| `invoke-stopper`       | `:bract.core/stopper`      |                         |                      | Stop running application   |
+| Inducer function       | Input context keys         | Input config keys       | Description |
+|------------------------|----------------------------|-------------------------|-------------|
+| `set-verbosity`        | `:bract.core/verbose?`     |                         | Set verbosity as per flag  |
+| `read-config`          | `:bract.core/config-files` |                         | Read config into `:bract.core/config`|
+| `run-context-inducers` | `:bract.core/inducers`     |                         | Execute specified inducers |
+| `run-config-inducers`  | `:bract.core/config`       | `"bract.core.inducers"` | Execute specified inducers |
+| `context-hook`         |                            |                         | Do something with context  |
+| `config-hook`          | `:bract.core/config`       |                         | Do something with config   |
+| `export-as-sysprops`   |                            | `"bract.core.exports"`  | Export system properties   |
+| `unexport-sysprops`    |                            | `"bract.core.exports"`  | Remove system properties   |
+| `invoke-launcher`      | `:bract.core/launch?`      | `"bract.core.launcher"` | Launch application         |
+| `deinit`               | `:bract.core/deinit`       |                         | De-initialize application  |
+| `invoke-stopper`       | `:bract.core/stopper`      |                         | Stop running application   |
 
 
 ### Entry points
