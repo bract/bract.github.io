@@ -50,7 +50,7 @@ All inducers exposed by _bract.core_ are in the namespace `bract.core.inducer`. 
 | `set-verbosity`        | `:bract.core/verbose?`     |                         | Set verbosity as per flag  |
 | `read-config`          | `:bract.core/config-files` |                         | Read config into `:bract.core/config`|
 | `run-context-inducers` | `:bract.core/inducers`     |                         | Execute specified inducers |
-| `run-config-inducers`  | `:bract.core/config`       | `"bract.core.inducers"` | Execute specified inducers |
+| `run-config-inducers`  |                            | `"bract.core.inducers"` | Execute specified inducers |
 | `context-hook`         |                            |                         | Do something with context  |
 | `config-hook`          | `:bract.core/config`       |                         | Do something with config   |
 | `export-as-sysprops`   |                            | `"bract.core.exports"`  | Export system properties   |
