@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Module bract.core - Multi-purpose, modular application initialization framework for Clojure
+title: Module bract.cli - Multi-purpose, modular application initialization framework for Clojure
 ---
 # [Home](/)    |    [About](/about.html)    |    [Documentation](/documentation.html)    |    [Discuss](/discuss.html)
 
