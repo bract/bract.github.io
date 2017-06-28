@@ -2,7 +2,7 @@
 layout: default
 title: Module bract.ring - Multi-purpose, modular application initialization framework for Clojure
 ---
-# [Home](/)    |    [About](/about.html)    |    [Documentation](/documentation.html)    |    [Discuss](/discuss.html)
+# [Home](/) | [About](/about.html) | [Documentation](/documentation.html) | [Discuss](/discuss.html)
 
 ## Module: bract.ring
 
