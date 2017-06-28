@@ -11,9 +11,9 @@ Leiningen coordinates: `[bract/bract.ring "0.3.1"]`
 
 ### Context keys
 
-| Context key                | Value            | Description |
-|----------------------------|------------------|-------------|
-| `:bract.ring/ring-handler` | `(fn [request])` | Ring handler function |
+| Context key                | Value                        | Description |
+|----------------------------|------------------------------|-------------|
+| `:bract.ring/ring-handler` | `(fn [request]) -> response` | Ring handler function |
 
 
 ### Inducers
