@@ -101,9 +101,14 @@ There are few simple demo applications that may be useful to understand how Brac
   * ClojureScript
 
 
-## Concepts
+## Modules
 
-TODO
+Documentation of individual Bract modules is as follows:
+
+* [bract.core](/module/core.html)
+* [bract.cli](/module/cli.html)
+* [bract.dev](/module/dev.html)
+* [bract.ring](/module/ring.html)
 
 
 ## Howto
