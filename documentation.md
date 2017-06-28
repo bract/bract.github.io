@@ -93,6 +93,7 @@ There are few simple demo applications that may be useful to understand how Brac
   * REPL-based development entry point
   * Configurable Ring middleware using wrapper inducers
 * **[TodoMVC](https://github.com/bract/demo.todomvc)** is an interactive TodoMVC webapp developed using Ring and ClojureScript
+  * Logging as JSON, as text, configuration
   * Database configuration
   * Database migration entry point
   * CLI entry point for running application as uberjar
