@@ -129,7 +129,7 @@ config snippets below that illustrate such configuration.
  "dev-inducers"        []}
 
 ;; in file config/config.dev.edn
-{"parent.config.filenames" ["config/config.base.edn"]           ; <- overrides base entries in a parent file
+{"parent.config.filenames" ["config/config.base.edn"]           ; <- overrides entries in parent file
  "dev-inducers"            [(bract.core.inducer/config-hook     ; record the config
                               myapp.test-init/update-config!)
                             bract.core.dev/record-context!      ; record the app context
@@ -150,7 +150,7 @@ sample implementation of the namespace `myapp.test-init` could be as follows:
   [app-config]
   (alter-var-root #'config (fn [_] app-config)))
 
-(dev/init-once!)  ; <- entry point for Bract initialization (default config file: config/config.dev.edn)
+(dev/init-once!)  ; <- entry point for Bract initialization (default config: config/config.dev.edn)
 ```
 
 All test namespaces should require the namespace `myapp.test-init` such that Bract initialization is ensured.
@@ -173,7 +173,7 @@ code below (all else remains the same as the previous section):
   [app-config]
   (alter-var-root #'config (fn [_] app-config)))
 
-(ring-dev/init-once!)  ; <- entry point for Bract initialization (default config file: config/config.dev.edn)
+(ring-dev/init-once!)  ; <- entry point for Bract initialization (default config: config/config.dev.edn)
 ```
 
 
