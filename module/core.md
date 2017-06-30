@@ -6,7 +6,7 @@ title: Module bract.core - Multi-purpose, modular application initialization fra
 
 ## Module: bract.core
 
-Leiningen coordinates: `[bract/bract.core "0.3.1"]`
+Clojars coordinates: `[bract/bract.core "0.3.1"]`
 
 
 ### Keys

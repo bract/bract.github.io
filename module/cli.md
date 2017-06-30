@@ -6,7 +6,7 @@ title: Module bract.cli - Multi-purpose, modular application initialization fram
 
 ## Module: bract.cli
 
-Leiningen coordinates: `[bract/bract.cli "0.3.1"]`
+Clojars coordinates: `[bract/bract.cli "0.3.1"]`
 
 
 ### Context keys

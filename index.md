@@ -13,12 +13,12 @@ _**Bract requires Clojure 1.7 or higher, Java 7 or higher.**_
 ## Latest release
 
 |---------------------------------------------------|-------------------------------------------------|------------------------------|---------------------------------------------------------------|
-| Module                                            | Description                                     | Artifact                     | Dependencies                                                  |
+| Module                                            | Description                                     | Clojars artifact             | Dependencies                                                  |
 |---------------------------------------------------|-------------------------------------------------|------------------------------|---------------------------------------------------------------|
-| [bract.core](https://github.com/bract/bract.core) | Core functionality                              | `[bract/bract.core "0.3.0"]` | [Keypin](https://github.com/kumarshantanu/keypin) for config  |
-| [bract.cli](https://github.com/bract/bract.cli)   | CLI support                                     | `[bract/bract.cli  "0.3.0"]` | [tools.cli](https://github.com/clojure/tools.cli)             |
-| [bract.dev](https://github.com/bract/bract.dev)   | REPL support                                    | `[bract/bract.dev  "0.3.0"]` | [tools.namespace](https://github.com/clojure/tools.namespace) |
-| [bract.ring](https://github.com/bract/bract.ring) | [Ring](https://github.com/ring-clojure) support | `[bract/bract.ring "0.3.0"]` |                                                               |
+| [bract.core](https://github.com/bract/bract.core) | Core functionality                              | `[bract/bract.core "0.3.1"]` | [Keypin](https://github.com/kumarshantanu/keypin) for config  |
+| [bract.cli](https://github.com/bract/bract.cli)   | CLI support                                     | `[bract/bract.cli  "0.3.1"]` | [tools.cli](https://github.com/clojure/tools.cli)             |
+| [bract.dev](https://github.com/bract/bract.dev)   | REPL support                                    | `[bract/bract.dev  "0.3.1"]` | [tools.namespace](https://github.com/clojure/tools.namespace) |
+| [bract.ring](https://github.com/bract/bract.ring) | [Ring](https://github.com/ring-clojure) support | `[bract/bract.ring "0.3.1"]` |                                                               |
 
 
 ## License
