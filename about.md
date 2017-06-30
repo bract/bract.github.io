@@ -15,6 +15,7 @@ tasks that applications frequently need. This should be a solved problem in a re
 ### What is Bract?
 
 Bract is a Clojure framework to bring power and flexibility to application configuration and initialization workflow.
+Whether you are developing your application, writing tests or preparing for deployment, we have you covered.
 
 Bract aims to:
 
