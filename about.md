@@ -22,7 +22,7 @@ Bract aims to:
   - Application entry-point
   - Application configuration
   - Steps to initialize and launch application
-- Allow extensions to Bract facilities (e.g. any library/framework integration) via modules
+- Allow extensions to Bract (e.g. any library/framework integration) via modules
 
 Bract does not aim to:
 
