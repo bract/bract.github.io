@@ -16,13 +16,13 @@ tasks that applications frequently need. This should be a solved problem in a re
 
 Bract is a Clojure framework to bring power and flexibility to application configuration and initialization workflow.
 
-Bract aims to bind the following pieces together:
+Bract aims to:
 
-- Application entry-point
-- Application configuration
-- Steps to initialize and launch application
-- Extensions via Bract modules
-- Integration with libraries/frameworks via Bract modules
+- Bind the following pieces together
+  - Application entry-point
+  - Application configuration
+  - Steps to initialize and launch application
+- Allow extensions to Bract facilities (e.g. any library/framework integration) via modules
 
 Bract does not aim to:
 
