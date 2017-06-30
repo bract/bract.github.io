@@ -173,7 +173,7 @@ code below (all else remains the same as the previous section):
   [app-config]
   (alter-var-root #'config (fn [_] app-config)))
 
-(ring-dev/init-once!)  ; <- entry point for Bract initialization (default config: config/config.dev.edn)
+(ring-dev/init-once!)  ; <- Bract initialization entry point (default config: config/config.dev.edn)
 ```
 
 
