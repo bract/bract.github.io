@@ -7,7 +7,7 @@ title: About Bract - Multi-purpose, modular application initialization framework
 ## Rationale
 
 Application configuration and initialization are tangential to delivering business value, yet we frequently get bogged
-down by their incidental complexity. Application development could be a wonderful experience if we only have to focus
+down by their incidental complexity. Application development could be a better experience if we only have to focus
 on the application logic without worrying about configuration, initialization and the sundry development/maintenance
 tasks that applications frequently need. This should be a solved problem in a repeatable, predictable manner.
 
@@ -15,7 +15,7 @@ tasks that applications frequently need. This should be a solved problem in a re
 ### What is Bract?
 
 Bract is a Clojure framework to bring power and flexibility to application configuration and initialization workflow.
-Whether you are developing your application, writing tests or preparing for deployment, we have you covered.
+Whether you are developing your application, writing tests or preparing for deployment, Bract has you covered.
 
 Bract aims to:
 
@@ -23,14 +23,14 @@ Bract aims to:
   - Application entry-point
   - Application configuration
   - Steps to initialize and launch application
-- Allow extensions to Bract (e.g. any library/framework integration) via modules
+- Allow extensions to Bract, e.g. any library/framework integration
 
 Bract does not aim to:
 
 - Prescribe which environments (Dev/QA/Prod etc.) you may have
 - Decide which libraries you should use (except [Keypin](https://github.com/kumarshantanu/keypin) for configuration)
-- Make you use dependency injection, let alone any particular DI library
-- Discourage you from using dependency injection
+- Make you use Dependency Injection, let alone any particular DI library
+- Discourage you from using Dependency Injection
 
 
 Bract is made of _bract.core_ (with [Keypin](https://github.com/kumarshantanu/keypin) as the only dependency for config
