@@ -37,7 +37,8 @@ Look up value:
 
 ## Inducer
 
-Bract [revolves around](/about.html#how-it-works) the idea of _inducers_. Let us write a hello-world inducer first:
+Bract initialization [revolves around](/about.html#how-it-works) the idea of _inducers_. Let us write a hello-world
+inducer first:
 
 ```clojure
 (defn hello-world
@@ -145,52 +146,30 @@ config snippets below that illustrate such configuration.
  "dev-inducers"        []}
 
 ;; in file config/config.dev.edn
-{"parent.config.filenames" ["config/config.base.edn"]           ; <- overrides entries in parent file
- "dev-inducers"            [(bract.core.inducer/config-hook     ; record the config
-                              myapp.test-init/update-config!)
-                            bract.core.dev/record-context!      ; record the app context
+{"parent.config.filenames" ["config/config.base.edn"]       ; <- overrides entries in parent file
+ "dev-inducers"            [bract.core.dev/record-context!  ; record the app context
                             ]}
 ```
 
-In this example, we delegate storing of the config to a function `myapp.test-init/update-config!` available in dev. A
-sample implementation of the namespace `myapp.test-init` could be as follows:
+In this example, we let the `record-context!` inducer store the context at `bract.core.dev/app-context`. The
+application may have a test namespace for tests to trigger initialization as follows:
 
 ```clojure
 (ns myapp.test-init
   (:require
     [bract.core.dev :as dev]))
 
-(defonce config (format "Var %s/config not initialized" *ns*))
-
-(defn update-config!
-  [app-config]
-  (alter-var-root #'config (fn [_] app-config)))
-
-(dev/init-once!)  ; <- entry point for Bract initialization (default config: config/config.dev.edn)
+(dev/ensure-init)  ; <- entry point for Bract initialization (default config: config/config.dev.edn)
 ```
 
 All test namespaces should require the namespace `myapp.test-init` such that Bract initialization is ensured.
 
 
-### Setup automated Ring webapp testing
+#### Automated Ring webapp testing
 
-For a Ring based webapp, you may sometimes want to call the Ring handler in addition to the config/context. In such a
-scenario, instead of invoking `bract.core.dev/init-once!` you should use `bract.ring.dev/init-once!`. See the example
-code below (all else remains the same as the previous section):
-
-```clojure
-(ns myapp.test-init
-  (:require
-    [bract.ring.dev :as ring-dev]))
-
-(defonce config (format "Var %s/config not initialized" *ns*))
-
-(defn update-config!
-  [app-config]
-  (alter-var-root #'config (fn [_] app-config)))
-
-(ring-dev/init-once!)  ; <- Bract initialization entry point (default config: config/config.dev.edn)
-```
+For a Ring based webapp you may want to call the Ring handler in your tests in addition to the config/context. In such
+a scenario the same setup as above would work. You can get the Ring handler using the key `:bract.ring/ring-handler`
+from the context.
 
 
 <a href='https://github.com/bract'><img style='position: absolute; top: 0; right: 0; border: 0;' src='https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67' alt='Fork me on GitHub' data-canonical-src='https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png'></a>

@@ -6,7 +6,7 @@ title: Module bract.core - Multi-purpose, modular application initialization fra
 
 ## Module: bract.core
 
-Clojars coordinates: `[bract/bract.core "0.3.1"]`
+Clojars coordinates: `[bract/bract.core "0.4.0"]`
 
 
 ### Keys
@@ -24,7 +24,7 @@ _"Fully Qualified Function Name"_ in this section.
 | `:bract.core/cli-args`     | Vector of CLI args         | Command line arguments                         |
 | `:bract.core/config`       | Config map                 | Application config, typically with string keys |
 | `:bract.core/inducers`     | Coll of inducer fns/FQVNs  | Inducer fns or their fully qualified names     |
-| `:bract.core/deinit`       | Function `(fn [])`         | De-initialization function for the app         |
+| `:bract.core/deinit`       | List of functions `(fn [])`| List of de-initialization functions for the app|
 | `:bract.core/launch?`      | Boolean                    | Whether invoke launcher fn                     |
 | `:bract.core/stopper`      | Function `(fn [])`         | Function to stop the started application       |
 
@@ -48,15 +48,15 @@ All inducers exposed by _bract.core_ are in the namespace `bract.core.inducer`. 
 | Inducer function       | Input context keys         | Input config keys       | Description |
 |------------------------|----------------------------|-------------------------|-------------|
 | `set-verbosity`        | `:bract.core/verbose?`     |                         | Set verbosity as per flag  |
-| `read-config`          | `:bract.core/config-files` |                         | Read config into `:bract.core/config`|
+| `read-context`         | `:bract.core/context-file` |                         | Read/merge context into the current context|
+| `read-config`          | `:bract.core/config-files` |                         | Read/merge config into `:bract.core/config`|
 | `run-context-inducers` | `:bract.core/inducers`     |                         | Execute specified inducers |
 | `run-config-inducers`  |                            | `"bract.core.inducers"` | Execute specified inducers |
 | `context-hook`         |                            |                         | Do something with context  |
-| `config-hook`          | `:bract.core/config`       |                         | Do something with config   |
 | `export-as-sysprops`   |                            | `"bract.core.exports"`  | Export system properties   |
 | `unexport-sysprops`    |                            | `"bract.core.exports"`  | Remove system properties   |
 | `invoke-launcher`      | `:bract.core/launch?`      | `"bract.core.launcher"` | Launch application         |
-| `deinit`               | `:bract.core/deinit`       |                         | De-initialize application  |
+| `invoke-deinit`        | `:bract.core/deinit`       |                         | De-initialize application  |
 | `invoke-stopper`       | `:bract.core/stopper`      |                         | Stop running application   |
 
 
@@ -77,5 +77,6 @@ available in the `bract.core.dev` namespace:
 | `(stop)`            | Stop a started application based on `:bract.core/stopper` key in the context |
 
 **Note:** While these functions are for REPL support, they don't provide code reload feature.
+
 
 <a href='https://github.com/bract'><img style='position: absolute; top: 0; right: 0; border: 0;' src='https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67' alt='Fork me on GitHub' data-canonical-src='https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png'></a>
