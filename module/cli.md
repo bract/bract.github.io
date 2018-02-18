@@ -6,7 +6,7 @@ title: Module bract.cli - Multi-purpose, modular application initialization fram
 
 ## Module: bract.cli
 
-Clojars coordinates: `[bract/bract.cli "0.4.0"]`
+Clojars coordinates: `[bract/bract.cli "0.5.0"]`
 
 
 ### Context keys

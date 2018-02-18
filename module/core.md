@@ -6,7 +6,7 @@ title: Module bract.core - Multi-purpose, modular application initialization fra
 
 ## Module: bract.core
 
-Clojars coordinates: `[bract/bract.core "0.4.0"]`
+Clojars coordinates: `[bract/bract.core "0.5.0"]`
 
 
 ### Keys
@@ -38,6 +38,7 @@ The application config is placed under the context key `:bract.core/config` (see
 | `"bract.core.inducers"`    | Vector of inducer FQVNs    | Inducer fn names |
 | `"bract.core.exports"`     | Vector of config keys      | Config keys to export as system properties |
 | `"bract.core.launcher"`    | Launcher FQVN              | Launcher fn `(fn [context])` name |
+|`"bract.core.drain.timeout"`| Timeout e.g. [100 :millis] | Workload drain timeout |
 
 
 ### Inducers
@@ -58,6 +59,8 @@ All inducers exposed by _bract.core_ are in the namespace `bract.core.inducer`. 
 | `invoke-launcher`      | `:bract.core/launch?`      | `"bract.core.launcher"` | Launch application         |
 | `invoke-deinit`        | `:bract.core/deinit`       |                         | De-initialize application  |
 | `invoke-stopper`       | `:bract.core/stopper`      |                         | Stop running application   |
+| `add-shutdown-hook`    |                       | `"bract.core.drain.timeout"` | Add given inducer as shutdown hook |
+| `set-default-exception-handler` |                   |                         | Set a default exception handler    |
 
 
 ### Entry points

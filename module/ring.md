@@ -6,7 +6,7 @@ title: Module bract.ring - Multi-purpose, modular application initialization fra
 
 ## Module: bract.ring
 
-Clojars coordinates: `[bract/bract.ring "0.4.0"]`
+Clojars coordinates: `[bract/bract.ring "0.5.0"]`
 
 
 ### Context keys
@@ -16,13 +16,41 @@ Clojars coordinates: `[bract/bract.ring "0.4.0"]`
 | `:bract.ring/ring-handler` | `(fn [request]) -> response` | Ring handler function |
 
 
+### Config files
+
+The following config resources are provided with the module:
+- bract/ring/default.edn  (defaults for Ring wrappers)
+- bract/ring/devdelta.edn (defaults for development mode)
+
+
 ### Inducers
 
 All inducers exposed by _bract.ring_ are in the namespace `bract.ring.inducer`. A summary is below:
 
-| Inducer function  | Input context keys         | Output context keys        | Description |
-|-------------------|----------------------------|----------------------------|-------------|
-| `apply-wrappers`  | `:bract.ring/ring-handler` | `:bract.ring/ring-handler` | Apply Ring wrappers |
+| Inducer function    | Input context keys         | Output context keys        | Description |
+|---------------------|----------------------------|----------------------------|-------------|
+| `apply-middlewares` | `:bract.ring/ring-handler` | `:bract.ring/ring-handler` | Apply Ring middlewares |
+| `apply-wrappers`    | `:bract.ring/ring-handler` | `:bract.ring/ring-handler` | Apply Ring wrappers |
+
+
+### Wrappers
+
+_Wrappers_ are functions `(fn [handler context]) -> handler` used to decorate the Ring handler. Wrappers are applied
+using the inducer `bract.ring.inducer/apply-wrappers`. The following wrappers are provided:
+
+| Wrapper function                                | Description |
+|-------------------------------------------------|-------------|
+| `bract.ring.wrapper/uri-prefix-match-wrapper`   | Match URI based on prefix |
+| `bract.ring.wrapper/uri-trailing-slash-wrapper` | Easy URI matching by making trailing slash optional |
+| `bract.ring.wrapper/traffic-drain-wrapper`      | Respond with HTTP 503 during application shutdown |
+| `bract.ring.wrapper/distributed-trace-wrapper`  | Make distributed tracing headers available in request |
+| `bract.ring.wrapper/params-normalize-wrapper`   | Normalize params added by `wrap-params` middleware |
+| `bract.ring.wrapper/health-check-wrapper`       | Add health-check endpoint - app needs to hook into |
+| `bract.ring.wrapper/info-endpoint-wrapper`      | Add /info endpoint to report runtime information |
+| `bract.ring.wrapper/ping-endpoint-wrapper`      | Add /ping endpoint that responds with pong |
+| `bract.ring.wrapper/unexpected->500-wrapper`    | Turn bad Ring responses and exceptions into HTTP 500 |
+
+Each wrapper may be disabled or enabled based on configuration and they accept several other config parameters.
 
 
 ### Entry points
@@ -32,7 +60,7 @@ This module provides entry points for development purpose.
 To integrate with [lein-ring](https://github.com/weavejester/lein-ring) put the following in your `project.clj`:
 
 ```clojure
-:plugins [[lein-ring "0.12.0"]]
+:plugins [[lein-ring "0.12.3"]]
 :ring {:port    3000                      ; <- optional
        :nrepl   {:start? true :port 3001} ; <- optional
        :handler bract.ring.dev/handler

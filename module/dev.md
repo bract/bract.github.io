@@ -6,7 +6,7 @@ title: Module bract.dev - Multi-purpose, modular application initialization fram
 
 ## Module: bract.dev
 
-Clojars coordinates: `[bract/bract.dev "0.4.0"]`
+Clojars coordinates: `[bract/bract.dev "0.5.0"]`
 
 
 ### Installation
