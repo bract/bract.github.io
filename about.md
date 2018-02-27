@@ -22,7 +22,7 @@ Bract aims to:
 - Bind the following pieces together
   - Application entry-point
   - Application configuration
-  - Steps to initialize and launch application
+  - Various steps to initialize, launch, stop and deinitialize application
 - Allow extensions to Bract, e.g. any library/framework integration
 
 Bract does not aim to:
