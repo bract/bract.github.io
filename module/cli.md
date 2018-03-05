@@ -17,6 +17,7 @@ Clojars coordinates: `[bract/bract.cli "0.5.0"]`
 | `:bract.cli/command`          | String        | CLI command to execute |
 | `:bract.cli/cmd-args`         | String vector | CLI command arguments  |
 | `:bract.cli/app-commands`     | Command map   | Commands, e.g. `{"run" {:doc "Run app" :handler myapp.core/run}}` |
+| `:bract.cli/pre-inducers`     | Inducer list  | Inducers to run before parsing CLI args |
 
 
 ### Inducers
@@ -25,6 +26,7 @@ All inducers exposed by _bract.cli_ are in the namespace `bract.cli.inducer`. A 
 
 | Inducer function  | Input context keys        | Output context keys        | Description |
 |-------------------|---------------------------|----------------------------|-------------|
+| `merge-commands`  | `:bract.cli/app-commands` | `:bract.cli/app-commands`  | Add app commands|
 | `parse-args`      | `:bract.cli/cli-args`     | `:bract.core/verbose?`     | Parse CLI args  |
 |                   |                           | `:bract.core/config-files` |                 |
 |                   |                           | `:bract.cli/command`       |                 |

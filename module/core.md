@@ -27,6 +27,7 @@ _"Fully Qualified Function Name"_ in this section.
 | `:bract.core/deinit`       | List of functions `(fn [])`| List of de-initialization functions for the app|
 | `:bract.core/launch?`      | Boolean                    | Whether invoke launcher fn                     |
 | `:bract.core/stopper`      | Function `(fn [])`         | Function to stop the started application       |
+| `:bract.core/app-exit-code`| App exit code (int, >= 0)  | Application exit code                          |
 
 
 #### Config keys
@@ -61,6 +62,10 @@ All inducers exposed by _bract.core_ are in the namespace `bract.core.inducer`. 
 | `invoke-stopper`       | `:bract.core/stopper`      |                         | Stop running application   |
 | `add-shutdown-hook`    |                       | `"bract.core.drain.timeout"` | Add given inducer as shutdown hook |
 | `set-default-exception-handler` |                   |                         | Set a default exception handler    |
+| `discover-hostname`    |                            |                         | Discover+update hostname in config |
+| `discover-project-edn-version`    |                 |                         | Update application version in config|
+| `fallback-config-files`|                            |                         | Set config files when unspecified  |
+| `prepare-launcher`     |                            | `"bract.core.launcher"` | Set launcher and enable the launch |
 
 
 ### Entry points
