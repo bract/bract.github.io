@@ -6,7 +6,7 @@ title: Module bract.core - Multi-purpose, modular application initialization fra
 
 ## Module: bract.core
 
-Clojars coordinates: `[bract/bract.core "0.5.0"]`
+Clojars coordinates: `[bract/bract.core "0.6.0"]`
 
 
 ### Keys

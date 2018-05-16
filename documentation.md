@@ -127,6 +127,7 @@ Documentation of individual Bract modules is as follows:
 * [bract.cli](/module/cli.html)
 * [bract.dev](/module/dev.html)
 * [bract.ring](/module/ring.html)
+* [gossamer.core](/module/gossamer.html)
 
 
 ## Howto

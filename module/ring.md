@@ -6,7 +6,7 @@ title: Module bract.ring - Multi-purpose, modular application initialization fra
 
 ## Module: bract.ring
 
-Clojars coordinates: `[bract/bract.ring "0.5.0"]`
+Clojars coordinates: `[bract/bract.ring "0.6.0-0.1.0"]`
 
 
 ### Context keys

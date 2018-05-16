@@ -12,13 +12,33 @@ _**Bract requires Clojure 1.7 or higher, Java 7 or higher.**_
 
 ## Latest release
 
-|---------------------------------------------------|-------------------------------------------------|------------------------------|---------------------------------------------------------------|
-| Module                                            | Description                                     | Clojars artifact             | Dependencies                                                  |
-|---------------------------------------------------|-------------------------------------------------|------------------------------|---------------------------------------------------------------|
-| [bract.core](https://github.com/bract/bract.core) | Core functionality                              | `[bract/bract.core "0.5.1"]` | [Keypin](https://github.com/kumarshantanu/keypin) for config  |
-| [bract.cli](https://github.com/bract/bract.cli)   | CLI support                                     | `[bract/bract.cli  "0.5.1"]` | [tools.cli](https://github.com/clojure/tools.cli)             |
-| [bract.dev](https://github.com/bract/bract.dev)   | REPL support                                    | `[bract/bract.dev  "0.5.1"]` | [tools.namespace](https://github.com/clojure/tools.namespace) |
-| [bract.ring](https://github.com/bract/bract.ring) | [Ring](https://github.com/ring-clojure) support | `[bract/bract.ring "0.5.1"]` |                                                               |
+|---------------------------------------------------------|-------------------------------------------------|---------------------------------------|---------------------------------------------------------------|
+| Module                                                  | Description                                     | Clojars artifact                      | Dependencies                                                  |
+|---------------------------------------------------------|-------------------------------------------------|---------------------------------------|---------------------------------------------------------------|
+| [bract.core](https://github.com/bract/bract.core)       | Core functionality                              | `[bract/bract.core    "0.6.0"]`       | [Keypin](https://github.com/kumarshantanu/keypin) for config  |
+| [bract.cli](https://github.com/bract/bract.cli)         | CLI support                                     | `[bract/bract.cli     "0.6.0-0.1.0"]` | [tools.cli](https://github.com/clojure/tools.cli)             |
+| [bract.dev](https://github.com/bract/bract.dev)         | REPL support                                    | `[bract/bract.dev     "0.6.0-0.1.0"]` | [tools.namespace](https://github.com/clojure/tools.namespace) |
+| [bract.ring](https://github.com/bract/bract.ring)       | [Ring](https://github.com/ring-clojure) support | `[bract/bract.ring    "0.6.0-0.1.0"]` |                                                               |
+| [gossamer.core](https://github.com/bract/gossamer.core) | Micro Web framework                             | `[bract/gossamer.core "0.6.0-0.1.0"]` | [calfpath](https://github.com/kumarshantanu/calfpath) routing |
+
+
+## Quick start
+
+To generate a server-side web application combining several Bract modules, run the following command:
+
+```shell
+$ lein new gossamer myapp
+$ cd myapp
+```
+
+Once you generate the application, you can use the following commands:
+
+```shell
+$ lein repl                  # load application in the REPL - run (?) to see help
+$ lein ring server-headless  # start application in DEV mode
+$ lein do clean, uberjar     # generate uberjar to run in atandalone mode
+$ java -jar target/uberjar/myapp-0.1.0-SNAPSHOT-standalone.jar -vf config/config.edn
+```
 
 
 ## License
