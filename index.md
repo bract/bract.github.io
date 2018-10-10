@@ -13,11 +13,11 @@ _**Bract requires Clojure 1.7 or higher, Java 7 or higher.**_
 |---------------------------------------------------------|-------------------------------------------------|---------------------------------------|---------------------------------------------------------------|
 | Module                                                  | Description                                     | Clojars artifact                      | Dependencies                                                  |
 |---------------------------------------------------------|-------------------------------------------------|---------------------------------------|---------------------------------------------------------------|
-| [bract.core](https://github.com/bract/bract.core)       | Core functionality                              | `[bract/bract.core    "0.6.0"]`       | [Keypin](https://github.com/kumarshantanu/keypin) for config  |
-| [bract.cli](https://github.com/bract/bract.cli)         | CLI support                                     | `[bract/bract.cli     "0.6.0-0.1.0"]` | [tools.cli](https://github.com/clojure/tools.cli)             |
-| [bract.dev](https://github.com/bract/bract.dev)         | REPL support                                    | `[bract/bract.dev     "0.6.0-0.1.0"]` | [tools.namespace](https://github.com/clojure/tools.namespace) |
-| [bract.ring](https://github.com/bract/bract.ring)       | [Ring](https://github.com/ring-clojure) support | `[bract/bract.ring    "0.6.0-0.1.0"]` |                                                               |
-| [gossamer.core](https://github.com/bract/gossamer.core) | Micro Web framework                             | `[bract/gossamer.core "0.6.0-0.1.0"]` | [Calfpath](https://github.com/kumarshantanu/calfpath) routing |
+| [bract.core](https://github.com/bract/bract.core)       | Core functionality                              | `[bract/bract.core    "0.6.1"]`       | [Keypin](https://github.com/kumarshantanu/keypin) for config  |
+| [bract.cli](https://github.com/bract/bract.cli)         | CLI support                                     | `[bract/bract.cli     "0.6.1-0.1.0"]` | [tools.cli](https://github.com/clojure/tools.cli)             |
+| [bract.dev](https://github.com/bract/bract.dev)         | REPL support                                    | `[bract/bract.dev     "0.6.1-0.1.0"]` | [tools.namespace](https://github.com/clojure/tools.namespace) |
+| [bract.ring](https://github.com/bract/bract.ring)       | [Ring](https://github.com/ring-clojure) support | `[bract/bract.ring    "0.6.1-0.1.0"]` |                                                               |
+| [gossamer.core](https://github.com/bract/gossamer.core) | Micro Web framework                             | `[bract/gossamer.core "0.6.1-0.1.0"]` | [Calfpath](https://github.com/kumarshantanu/calfpath) routing |
 
 
 ## Quick start
