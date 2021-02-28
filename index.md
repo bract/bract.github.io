@@ -45,7 +45,7 @@ $ cd myapp
 Once you generate the application, you can use the following commands:
 
 ```shell
-$ lein repl                  # load application in the REPL - run (?) to see help
+$ lein repl                  # load application in the REPL - run (help) to see help
 $ lein ring server-headless  # start application in DEV mode
 $ lein do clean, uberjar     # generate uberjar to run in standalone mode
 $ java -jar target/uberjar/myapp-0.1.0-SNAPSHOT-standalone.jar -vf config/config.edn
